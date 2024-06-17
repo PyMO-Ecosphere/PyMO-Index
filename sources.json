@@ -15,6 +15,6 @@
         "screenshot_baseurl": "",
         "local_path": "./gamedb.json",
         "local_screenshot_path": "./images/",
-        "desc": "PyMO生态圈游戏索引，不能确保是否取得汉化组授权。如果你要下载此处的游戏，必须加入PyMO生态圈，具体请见QQ群：170814321。"
+        "desc": "PyMO生态圈游戏索引，不能确保是否取得汉化组授权。如果你要下载此处的游戏，需要先加入PyMO生态圈，加入生态圈并不收费，仅用于规避汉化组授权问题，具体请见QQ群：170814321。"
     }
 ]
