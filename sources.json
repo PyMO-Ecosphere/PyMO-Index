@@ -10,7 +10,7 @@
     {
         "name": "PyMO生态圈游戏索引",
         "id": "pymo-ecosphere",
-        "url": "",
+        "url": "https://raw.githubusercontent.com/PyMO-Ecosphere/PyMO-Index/main/pymo-ecosphere.json",
         "screenshot_baseurl": "",
         "local_path": "./pymo-ecosphere.json",
         "desc": "PyMO生态圈游戏索引，不能确保是否取得汉化组授权。"
