@@ -20,15 +20,11 @@ type Source =
 
 module Source =
 
-    [<Literal>]
-    let private sourcesJsonPath = "./sources.json"
-
-
-    type private SourcesJsonType = JsonProvider<sourcesJsonPath>
+    type private SourcesJsonType = JsonProvider<"./sources.json">
 
 
     let sources =
-        SourcesJsonType.Load sourcesJsonPath
+        SourcesJsonType.GetSamples()
         |> map (fun x ->
             { Name = x.Name
               Id = x.Id
@@ -37,6 +33,15 @@ module Source =
               LocalPath = x.LocalPath
               LocalScreenshotPath = x.LocalScreenshotPath
               Description = x.Desc })
+
+
+    let tryFindSource sourceId =
+        tryFind (fun x -> x.Id = sourceId) sources
+
+
+    let findSource =
+        tryFindSource
+        >> Option.defaultWith (fun () -> failwith "Source not found")
 
 
 type GamePlatform =
@@ -177,6 +182,29 @@ module GameMetadata =
               Title = json.Title
               UnzipPass = json.UnzipPass
               Source = source })
+
+
+    let private toJsonType (game: GameMetadata) =
+        GameMetadataJsonType.Root(
+            game.Author,
+            game.BaiduFolder,
+            game.ContainsH,
+            game.DownloadLink,
+            game.DownloadPass,
+            game.Folder,
+            game.GameID |> map int,
+            game.Introduction,
+
+            game.Platforms
+            |> map GamePlatform.toString
+            |> toArray,
+
+            game.PublishDate |> map Date.toString,
+            game.PublishSite,
+            game.Screenshots |> toArray,
+            game.Title,
+            game.UnzipPass
+        )
 
 
     let loadGamesFromSource source =

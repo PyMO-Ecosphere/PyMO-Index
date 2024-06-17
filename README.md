@@ -39,3 +39,11 @@ publish_site  | string       | 是   | 发布帖
 screenshots   | string array | 否，但可为空列表   | 游戏截图列表
 title         | string       | 否   | 游戏标题
 unzip_pass    | string       | 是   | 解压密码
+
+## 各脚本工具
+
+脚本工具使用F#语言编写，可以安装.NET SDK后使用`dotnet fsi <fsx文件>`命令来执行这些脚本。
+
+### `pymo-index-utils.fsx`
+
+该文件用于解析和处理游戏索引，可利用该脚本编写处理游戏索引的程序。

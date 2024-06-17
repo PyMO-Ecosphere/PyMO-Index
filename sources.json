@@ -11,10 +11,10 @@
     {
         "name": "PyMO生态圈游戏索引",
         "id": "pymo-ecosphere",
-        "url": "https://raw.githubusercontent.com/PyMO-Ecosphere/PyMO-Index/main/pymo-ecosphere.json",
+        "url": "https://raw.githubusercontent.com/PyMO-Ecosphere/PyMO-Index/main/gamedb.json",
         "screenshot_baseurl": "",
-        "local_path": "./pymo-ecosphere.json",
-        "local_screenshot_path": "./images/pymo-ecosphere/",
-        "desc": "PyMO生态圈游戏索引，不能确保是否取得汉化组授权。"
+        "local_path": "./gamedb.json",
+        "local_screenshot_path": "./images/",
+        "desc": "PyMO生态圈游戏索引，不能确保是否取得汉化组授权。如果你要下载此处的游戏，必须加入PyMO生态圈，具体请见QQ群：170814321。"
     }
 ]
