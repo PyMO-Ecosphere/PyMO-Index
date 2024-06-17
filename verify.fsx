@@ -28,6 +28,15 @@ let checkUnique' memberName f toCheck =
     checkUnique memberName (f >> Some) toCheck
 
 
+let assertMember (errInfo: string) (f: 'a -> bool) (toCheck: 'a seq) =
+    for itemToCheck in toCheck do
+        if not <| f itemToCheck then
+            printfn "以下对象不满足条件“%s”，这是不被允许的：" errInfo
+            printfn "%A" itemToCheck
+            printfn ""
+            printfn ""
+            hasError <- true
+
 checkUnique' "源ID" _.Id Source.sources
 checkUnique' "源URL" _.Url Source.sources
 
