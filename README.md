@@ -47,3 +47,7 @@ unzip_pass    | string       | 是   | 解压密码
 ### `pymo-index-utils.fsx`
 
 该文件用于解析和处理游戏索引，可利用该脚本编写处理游戏索引的程序。
+
+### `verify.fsx`
+
+该工具用于对索引的正确性进行验证。

@@ -1,5 +1,9 @@
+#if INTERACTIVE
 #r "nuget: FSharp.Data"
 #r "nuget: FSharpPlus"
+#endif
+
+namespace PyMOIndexUtils
 // 该模块是PyMO索引表的工具库，用于向其它工具提供支持
 
 open FSharp.Data
