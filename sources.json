@@ -5,6 +5,7 @@
         "url": "https://raw.githubusercontent.com/pymo/pymo.github.io/master/src/gamedb.json",
         "screenshot_baseurl": "https://raw.githubusercontent.com/pymo/pymo.github.io/master/",
         "local_path": null,
+        "local_screenshot_path": null,
         "desc": "在pymogames.com上所使用的索引，确保所有汉化的游戏都已经获得汉化组许可。"
     },
     {
@@ -13,6 +14,7 @@
         "url": "https://raw.githubusercontent.com/PyMO-Ecosphere/PyMO-Index/main/pymo-ecosphere.json",
         "screenshot_baseurl": "",
         "local_path": "./pymo-ecosphere.json",
+        "local_screenshot_path": "./images/pymo-ecosphere/",
         "desc": "PyMO生态圈游戏索引，不能确保是否取得汉化组授权。"
     }
 ]

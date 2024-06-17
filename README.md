@@ -33,9 +33,9 @@ download_pass | string       | 是   | 上述下载链接的提取码
 folder        | string       | 是   | 仅用于兼容官方的游戏索引
 game_id       | int          | 是   | 仅用于兼容官方的游戏索引
 introduction  | string       | 是   | 游戏简介
-platforms     | string array | 是   | 下载包中包含的平台
-publish_date  | date         | 否   | 发布日期
+platforms     | string array | 否，且不可为空列表   | 下载包中包含的平台
+publish_date  | date         | 是   | 发布日期
 publish_site  | string       | 是   | 发布帖
-screenshots   | string array | 是   | 游戏截图列表
-title         | string       | 是   | 游戏标题
-unzip_pass    | string       | 否   | 解压密码
+screenshots   | string array | 否，但可为空列表   | 游戏截图列表
+title         | string       | 否   | 游戏标题
+unzip_pass    | string       | 是   | 解压密码
