@@ -5,7 +5,6 @@
         "url": "https://raw.githubusercontent.com/pymo/pymo.github.io/master/src/gamedb.json",
         "screenshot_baseurl": "https://raw.githubusercontent.com/pymo/pymo.github.io/master/",
         "local_path": null,
-        "local_screenshot_path": null,
         "desc": "在pymogames.com上所使用的索引，确保所有汉化的游戏都已经获得汉化组许可。"
     },
     {
@@ -14,7 +13,6 @@
         "url": "https://raw.githubusercontent.com/PyMO-Ecosphere/PyMO-Index/main/gamedb.json",
         "screenshot_baseurl": "",
         "local_path": "./gamedb.json",
-        "local_screenshot_path": "./images/",
         "desc": "PyMO生态圈游戏索引，不能确保是否取得汉化组授权。如果你要下载此处的游戏，需要先加入PyMO生态圈，加入生态圈并不收费，该处资源仅在PyMO生态圈内小范围流传，具体请见QQ群：170814321。"
     }
 ]
