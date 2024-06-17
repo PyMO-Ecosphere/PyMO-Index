@@ -7,7 +7,7 @@ open System.Collections.Generic
 let mutable hasError = false
 
 
-let checkUnique (memberName: string) (f: 'a -> 'b option) (toCheck: 'a seq) =
+let assertUnique (memberName: string) (f: 'a -> 'b option) (toCheck: 'a seq) =
     let alreadyChecked: Dictionary<'b, 'a> = Dictionary()
     for itemToCheck in toCheck do
         match f itemToCheck with
@@ -24,8 +24,8 @@ let checkUnique (memberName: string) (f: 'a -> 'b option) (toCheck: 'a seq) =
                 alreadyChecked.Add (key, itemToCheck) |> ignore
 
 
-let checkUnique' memberName f toCheck =
-    checkUnique memberName (f >> Some) toCheck
+let assertUnique' memberName f toCheck =
+    assertUnique memberName (f >> Some) toCheck
 
 
 let assertMember (errInfo: string) (f: 'a -> bool) (toCheck: 'a seq) =
@@ -37,8 +37,18 @@ let assertMember (errInfo: string) (f: 'a -> bool) (toCheck: 'a seq) =
             printfn ""
             hasError <- true
 
-checkUnique' "源ID" _.Id Source.sources
-checkUnique' "源URL" _.Url Source.sources
+
+let assertStringNotEmpty errInfo (f: 'a -> string) =
+    assertMember errInfo (f >> System.String.IsNullOrEmpty >> not)
+
+
+List.iter (fun f -> f Source.sources) [
+    assertStringNotEmpty "源名称不能为空" _.Name
+    assertUnique' "源ID" _.Id
+    assertStringNotEmpty "源ID不能为空" _.Id
+    assertUnique' "源URL" _.Url
+    assertStringNotEmpty "源URL不能为空" _.Url
+]
 
 
 let abort () =
@@ -54,11 +64,17 @@ let allGames =
     |> Async.RunSynchronously
 
 
-checkUnique' "baidu_folder字段" _.BaiduFolder allGames
-checkUnique' "download_link字段" _.DownloadLink allGames
-checkUnique' "game_id字段" _.GameID allGames
+List.iter (fun f -> f allGames) [
+    assertStringNotEmpty "baidu_folder不能为空" _.BaiduFolder
+    assertUnique' "baidu_folder字段" _.BaiduFolder
+    assertUnique' "download_link字段" _.DownloadLink
+    assertUnique' "game_id字段" _.GameID
+    assertMember "platforms字段不能为空列表" (not << Set.isEmpty << _.Platforms)
+    assertStringNotEmpty "title字段不能为空" _.Title
+]
 
 
 if hasError then abort ()
+
 
 printfn "验证通过。"

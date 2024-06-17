@@ -224,7 +224,8 @@ module GameMetadata =
         async {
             let! jsonText =
                 match source.LocalPath with
-                | Some localPath when File.Exists localPath -> File.ReadAllTextAsync localPath |> Async.AwaitTask
+                | Some localPath when File.Exists localPath ->
+                    File.ReadAllTextAsync localPath |> Async.AwaitTask
                 | _ -> Http.AsyncRequestString(source.Url)
 
             return parseGameMetadataJson source jsonText
