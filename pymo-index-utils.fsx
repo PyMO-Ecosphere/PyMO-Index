@@ -13,12 +13,12 @@ open System.IO
 
 /// PyMO索引源
 type Source =
-    { Name: string
-      Id: string
-      Url: string
-      ScreenshotBaseUrl: string
-      LocalPath: string option
-      Description: string }
+  { Name: string
+    Id: string
+    Url: string
+    ScreenshotBaseUrl: string
+    LocalPath: string option
+    Description: string }
 
 
 module Source =
@@ -85,6 +85,11 @@ type Date = Date of y: uint16 * m: uint8 * d: uint8
 
 module Date =
 
+    let today =
+        let now = System.DateTime.Now
+        Date (uint16 now.Year, uint8 now.Month, uint8 now.Day)
+
+
     let toString (Date (y, m, d)) = sprintf "%d-%02d-%02d" y m d
 
 
@@ -99,21 +104,21 @@ module Date =
 
 
 type GameMetadata =
-    { Author: string option
-      BaiduFolder: string
-      ContainsH: bool
-      DownloadLink: string option
-      DownloadPass: string option
-      Folder: string option
-      GameID: uint option
-      Introduction: string option
-      Platforms: GamePlatform Set
-      PublishDate: Date option
-      PublishSite: string option
-      Screenshots: string array
-      Title: string
-      UnzipPass: string option
-      Source: Source }
+  { Author: string option
+    BaiduFolder: string
+    ContainsH: bool
+    DownloadLink: string option
+    DownloadPass: string option
+    Folder: string option
+    GameID: uint option
+    Introduction: string option
+    Platforms: GamePlatform Set
+    PublishDate: Date option
+    PublishSite: string option
+    Screenshots: string array
+    Title: string
+    UnzipPass: string option
+    Source: Source }
 
 
 module GameMetadata =
