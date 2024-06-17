@@ -207,6 +207,20 @@ module GameMetadata =
         )
 
 
+    let toJson = toJsonType >> _.JsonValue
+
+
+    let toIndexJson games = Array.map toJson games |> JsonValue.Array
+
+
+    let toIndexJsonString = toIndexJson >> _.ToString()
+
+
+    let writeIndexJson games outPath =
+        let j = toIndexJsonString games
+        File.WriteAllText (j, outPath)
+
+
     let loadGamesFromSource source =
         async {
             let! jsonText =
