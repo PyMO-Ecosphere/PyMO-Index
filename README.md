@@ -15,6 +15,7 @@ id     | string   | 否  | 索引源唯一标识符
 url    | string   | 是  | 索引源json链接
 screenshot_baseurl | string | 是 | 索引源游戏截图链接前缀
 local_path | string | 是 | 索引源json本地路径，当可以在本地找到索引源时优先使用本地索引源以进行调试
+local_screenshot_path | string | 是 | 索引源截图本地路径，当可以在本地找到图片时将会验证截图文件是否存在
 desc   | string   | 否  | 对索引源的说明
 
 ## 游戏索引表`gamedb.json`

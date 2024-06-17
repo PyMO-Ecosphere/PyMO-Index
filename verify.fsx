@@ -74,6 +74,18 @@ List.iter (fun f -> f allGames) [
 ]
 
 
+// check screenshots exists
+for game in allGames do
+    match game.Source.LocalScreenshotPath with
+    | None -> ()
+    | Some basePath ->
+        for screenshot in game.Screenshots do
+            let screenshotPath = System.IO.Path.Join (basePath, screenshot)
+            if not <| System.IO.File.Exists screenshotPath then
+                printfn "截图文件不存在：%s" screenshot
+                hasError <- true
+
+
 if hasError then abort ()
 
 

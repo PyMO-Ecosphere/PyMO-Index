@@ -18,6 +18,7 @@ type Source =
     Url: string
     ScreenshotBaseUrl: string
     LocalPath: string option
+    LocalScreenshotPath: string option
     Description: string }
 
 
@@ -34,6 +35,7 @@ module Source =
               Url = x.Url
               ScreenshotBaseUrl = x.ScreenshotBaseurl |> Option.defaultValue ""
               LocalPath = x.LocalPath
+              LocalScreenshotPath = x.LocalScreenshotPath
               Description = x.Desc })
 
 
