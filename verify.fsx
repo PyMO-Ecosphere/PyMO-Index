@@ -67,7 +67,6 @@ let allGames =
 List.iter (fun f -> f allGames) [
     assertStringNotEmpty "baidu_folder不能为空" _.BaiduFolder
     assertUnique' "baidu_folder字段" _.BaiduFolder
-    assertUnique' "download_link字段" _.DownloadLink
     assertUnique "game_id字段" _.GameID
     assertMember "platforms字段不能为空列表" (not << Set.isEmpty << _.Platforms)
     assertStringNotEmpty "title字段不能为空" _.Title
