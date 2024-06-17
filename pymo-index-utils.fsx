@@ -10,7 +10,7 @@ type Source =
     { Name: string
       Id: string
       Url: string
-      ScreenshotBaseUrl: string option
+      ScreenshotBaseUrl: string
       LocalPath: string option
       Description: string }
 
@@ -30,6 +30,6 @@ module Source =
             { Name = x.Name
               Id = x.Id
               Url = x.Url
-              ScreenshotBaseUrl = x.ScreenshotBaseurl
+              ScreenshotBaseUrl = x.ScreenshotBaseurl |> Option.defaultValue ""
               LocalPath = x.LocalPath
               Description = x.Desc })
