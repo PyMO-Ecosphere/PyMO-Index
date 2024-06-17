@@ -46,8 +46,7 @@ module Source =
 
 type GamePlatform =
     | Android
-    | S60v3
-    | S60v5
+    | Symbian
     | Nintendo3DS
     | NintendoWii
     | SonyPSP
@@ -58,8 +57,7 @@ module GamePlatform =
     let toString =
         function
         | Android -> "android"
-        | S60v3 -> "s60v3"
-        | S60v5 -> "s60v5"
+        | Symbian -> "symbian"
         | Nintendo3DS -> "3ds"
         | NintendoWii -> "wii"
         | SonyPSP -> "psp"
@@ -68,8 +66,7 @@ module GamePlatform =
     let tryFromString =
         function
         | "android" -> Some Android
-        | "s60v3" -> Some S60v3
-        | "s60v5" -> Some S60v5
+        | "symbian" -> Some Symbian
         | "3ds" -> Some Nintendo3DS
         | "wii" -> Some NintendoWii
         | "psp" -> Some SonyPSP
@@ -86,7 +83,7 @@ type Date = Date of y: uint16 * m: uint8 * d: uint8
 
 module Date =
 
-    let toString (Date (y, m, d)) = sprintf "%d-%d-%d" y m d
+    let toString (Date (y, m, d)) = sprintf "%d-%02d-%02d" y m d
 
 
     let tryFromString =
@@ -111,7 +108,7 @@ type GameMetadata =
       Platforms: GamePlatform Set
       PublishDate: Date option
       PublishSite: string option
-      Screenshots: string Set
+      Screenshots: string array
       Title: string
       UnzipPass: string option
       Source: Source }
@@ -178,7 +175,7 @@ module GameMetadata =
 
               PublishDate = json.PublishDate >>= Date.tryFromString
               PublishSite = json.PublishSite
-              Screenshots = json.Screenshots |> Set.ofArray
+              Screenshots = json.Screenshots
               Title = json.Title
               UnzipPass = json.UnzipPass
               Source = source })
@@ -213,12 +210,12 @@ module GameMetadata =
     let toIndexJson games = Array.map toJson games |> JsonValue.Array
 
 
-    let toIndexJsonString = toIndexJson >> _.ToString()
+    let toIndexJsonString = toIndexJson >> _.ToString(JsonSaveOptions.None)
 
 
-    let writeIndexJson games outPath =
+    let writeIndexJson outPath games =
         let j = toIndexJsonString games
-        File.WriteAllText (j, outPath)
+        File.WriteAllText (outPath, j)
 
 
     let loadGamesFromSource source =
@@ -237,3 +234,4 @@ module GameMetadata =
         |> map loadGamesFromSource
         |> Async.Parallel
         |> map Seq.concat
+
