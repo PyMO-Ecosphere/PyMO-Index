@@ -1,0 +1,9 @@
+[
+    {
+        "name": "PyMO官方游戏索引",
+        "id": "pymogames-official",
+        "url": "https://raw.githubusercontent.com/pymo/pymo.github.io/master/src/gamedb.json",
+        "screenshot_baseurl": "https://raw.githubusercontent.com/pymo/pymo.github.io/master/",
+        "local_path": null
+    }
+]
