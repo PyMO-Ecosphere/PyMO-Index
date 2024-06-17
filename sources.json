@@ -6,5 +6,13 @@
         "screenshot_baseurl": "https://raw.githubusercontent.com/pymo/pymo.github.io/master/",
         "local_path": null,
         "desc": "在pymogames.com上所使用的索引，确保所有汉化的游戏都已经获得汉化组许可。"
+    },
+    {
+        "name": "PyMO生态圈游戏索引",
+        "id": "pymo-ecosphere",
+        "url": "",
+        "screenshot_baseurl": "",
+        "local_path": "./pymo-ecosphere.json",
+        "desc": "PyMO生态圈游戏索引，不能确保是否取得汉化组授权。"
     }
 ]
