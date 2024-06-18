@@ -380,5 +380,30 @@
     ],
     "title": "触碰满是伤痕的少女",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "furyou",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Peaky-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "纯情不良少女，日文版，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-19",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Peaky-PyMO",
+    "screenshots": [
+      "furyou_0.png",
+      "furyou_1.png"
+    ],
+    "title": "纯情不良少女",
+    "unzip_pass": "pymo"
   }
 ]
