@@ -299,5 +299,33 @@
     ],
     "title": "夏色蜜汗",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "sweet_switch",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Amolight-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "Sweet☆Switch ～眉目传情～，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-18",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Amolight-PyMO",
+    "screenshots": [
+      "sweet_switch_0.png",
+      "sweet_switch_1.png",
+      "sweet_switch_2.png",
+      "sweet_switch_3.png",
+      "sweet_switch_4.png"
+    ],
+    "title": "Sweet☆Switch ～眉目传情～",
+    "unzip_pass": "pymo"
   }
 ]
