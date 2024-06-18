@@ -133,5 +133,61 @@
     ],
     "title": "花吻在上12 画室里的恋人们",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "hana13_tenshi_no_akogare",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Hana-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "花吻13，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-18",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Hana-PyMO",
+    "screenshots": [
+      "hana13_tenshi_no_akogare_0.png",
+      "hana13_tenshi_no_akogare_1.png",
+      "hana13_tenshi_no_akogare_2.png",
+      "hana13_tenshi_no_akogare_3.png",
+      "hana13_tenshi_no_akogare_4.png"
+    ],
+    "title": "花吻在上13 天使的憧憬",
+    "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "hana14_tenshitachi_no_harukoi",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Hana-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "花吻14，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-18",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Hana-PyMO",
+    "screenshots": [
+      "hana14_tenshitachi_no_harukoi_0.png",
+      "hana14_tenshitachi_no_harukoi_1.png",
+      "hana14_tenshitachi_no_harukoi_2.png",
+      "hana14_tenshitachi_no_harukoi_3.png",
+      "hana14_tenshitachi_no_harukoi_4.png"
+    ],
+    "title": "花吻在上14 天使们的春恋",
+    "unzip_pass": "pymo"
   }
 ]
