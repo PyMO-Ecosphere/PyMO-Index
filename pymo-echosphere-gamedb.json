@@ -245,5 +245,33 @@
     ],
     "title": "花吻在上16 天使们的约定",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "momoiro",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Amolight-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "桃色恋恋，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-18",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Amolight-PyMO",
+    "screenshots": [
+      "momoiro_0.png",
+      "momoiro_1.png",
+      "momoiro_2.png",
+      "momoiro_3.png",
+      "momoiro_4.png"
+    ],
+    "title": "桃色恋恋",
+    "unzip_pass": "pymo"
   }
 ]
