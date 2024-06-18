@@ -273,5 +273,31 @@
     ],
     "title": "桃色恋恋",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "natsuiro",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Amolight-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "夏色蜜汗，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-18",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Amolight-PyMO",
+    "screenshots": [
+      "natsuiro_1.png",
+      "natsuiro_2.png",
+      "natsuiro_3.png"
+    ],
+    "title": "夏色蜜汗",
+    "unzip_pass": "pymo"
   }
 ]
