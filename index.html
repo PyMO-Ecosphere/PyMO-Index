@@ -31,8 +31,14 @@
         <br />
     </div>
 
+    <div id="pass" align="center">
+        <h2>请输入密码</h2>
+        <input id="pass-password-input" type="password"></input>
+        <input type="button" value="确定" onclick="checkPass()"></input>
+    </div>
+
     <div id="games" align="center" hidden="true">
-        <a href="./index.html">返回源列表</a>
+        <a href="./index.html?pass=1">返回源列表</a>
         <br />
         <br />
         <br />
@@ -55,7 +61,7 @@
     </div>
 
     <div id="game-details" align="center" hidden="true">
-        <a href="./index.html">返回源列表</a>&nbsp; <a id="game-details-return-game-list">返回游戏列表</a>
+        <a href="./index.html?pass=1">返回源列表</a>&nbsp; <a id="game-details-return-game-list">返回游戏列表</a>
         <br />
         <br />
         <br />
@@ -121,7 +127,7 @@
 
             sources.forEach(src => {
                 var html = "";
-                html += "<a href='./index.html?source=" + src.id + "'><h3>" + src.name + "</h3></a>";
+                html += "<a href='./index.html?pass=1&source=" + src.id + "'><h3>" + src.name + "</h3></a>";
                 html += "<p>" + src.desc + "</p>";
                 html += "<br />"
 
@@ -150,7 +156,7 @@
                 var html = "";
                 html += "<tr>";
 
-                html += "<td><a href='./index.html?source=" + source.id + "&game=" + game.baidu_folder + "'>" + game.title + "</a></td>";
+                html += "<td><a href='./index.html?pass=1&source=" + source.id + "&game=" + game.baidu_folder + "'>" + game.title + "</a></td>";
                 html += "<td>" + game.baidu_folder + "</td>";
                 html += "<td>" + (game.contains_h ? "√" : "") + "</td>";
                 html += "<td>" + game.author + "</td>";
@@ -165,7 +171,7 @@
 
         function showGameDetails(source, game) {
             document.getElementById("game-details").hidden = false;
-            document.getElementById("game-details-return-game-list").href = "./index.html?source=" + source.id;
+            document.getElementById("game-details-return-game-list").href = "./index.html?pass=1&source=" + source.id;
             document.getElementById("game-details-source-name").innerHTML += source.name;
             document.getElementById("game-details-author").innerHTML += game.author;
             document.getElementById("game-details-id").innerHTML += game.baidu_folder;
@@ -194,9 +200,25 @@
             });
         }
 
+        function checkPass() {
+            let password = document.getElementById("pass-password-input").value;
+            if (password == "pymo") {
+                window.location.href = "./index.html?pass=1";
+            } else {
+                alert("密码错误");
+            }
+        }
+
         function main(sources) {
             let sourceId = getQueryVariable("source");
             let gameId = getQueryVariable("game");
+            let pass = getQueryVariable("pass");
+
+            if (pass != "1") {
+                return;
+            }
+
+            document.getElementById("pass").hidden = true;
 
             if (sourceId == false && gameId == false) {
                 showSourcesList(sources);
