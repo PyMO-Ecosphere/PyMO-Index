@@ -1,0 +1,25 @@
+<html>
+
+<script type="text/javascript">
+    fetch("./sources.json")
+        .then((response) => response.text())
+        .then((json) =>
+            document
+                .getElementById("test")
+                .innerText = json);
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <title>PyMO Index!</title>
+</head>
+
+<body>
+    <h1>网站建设中</h1>
+
+    <div id="test">
+        jsonHere
+    </div>
+</body>
+
+</html>
