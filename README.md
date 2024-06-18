@@ -18,7 +18,7 @@ local_path | string | 是 | 索引源json本地路径，当可以在本地找到
 local_screenshot_path | string | 是 | 索引源截图本地路径，当可以在本地找到图片时将会验证截图文件是否存在
 desc   | string   | 否  | 对索引源的说明
 
-## 游戏索引表`gamedb.json`
+## 游戏索引表`sources/<源名称>/gamedb.json`
 
 该文件为一个数组，数组内的每个对象都对应一个游戏的元数据。
 
@@ -52,3 +52,7 @@ unzip_pass    | string       | 是   | 解压密码
 ### `verify.fsx`
 
 该工具用于对索引的正确性进行验证。
+
+### `index.html`
+
+以网页的形式查看索引。
