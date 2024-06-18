@@ -18,7 +18,9 @@ local_path | string | 是 | 索引源json本地路径，当可以在本地找到
 local_screenshot_path | string | 是 | 索引源截图本地路径，当可以在本地找到图片时将会验证截图文件是否存在
 desc   | string   | 否  | 对索引源的说明
 
-## 游戏索引表`gamedb.json`
+## 游戏索引表
+
+类似`gamedb.json`或者`*-gamedb.json`均为游戏索引表。
 
 该文件为一个数组，数组内的每个对象都对应一个游戏的元数据。
 

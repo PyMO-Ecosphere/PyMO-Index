@@ -59,22 +59,22 @@ let abort () =
 if hasError then abort ()
 
 
-let allGames =
-    GameMetadata.loadGamesFromAllSources ()
-    |> Async.RunSynchronously
+for source in Source.sources do
+    let games =
+        GameMetadata.loadGamesFromSource source
+        |> Async.RunSynchronously
 
-
-List.iter (fun f -> f allGames) [
-    assertStringNotEmpty "baidu_folder不能为空" _.BaiduFolder
-    assertUnique' "baidu_folder字段" _.BaiduFolder
-    assertUnique "game_id字段" _.GameID
-    assertMember "platforms字段不能为空列表" (not << Set.isEmpty << _.Platforms)
-    assertStringNotEmpty "title字段不能为空" _.Title
+    List.iter (fun f -> f games) [
+        assertStringNotEmpty "baidu_folder不能为空" _.BaiduFolder
+        assertUnique' "baidu_folder字段" _.BaiduFolder
+        assertUnique "game_id字段" _.GameID
+        assertMember "platforms字段不能为空列表" (not << Set.isEmpty << _.Platforms)
+        assertStringNotEmpty "title字段不能为空" _.Title
 ]
 
 
 // check screenshots exists
-for game in allGames do
+for game in GameMetadata.loadGamesFromAllSources () |> Async.RunSynchronously do
     match game.Source.LocalScreenshotPath with
     | None -> ()
     | Some basePath ->
