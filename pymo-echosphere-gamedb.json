@@ -108,5 +108,30 @@
     ],
     "title": "花吻3：恋人的羁绊",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "hana12_atorie_no_koibitotachi",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Hana-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "花吻12，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-18",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Hana-PyMO",
+    "screenshots": [
+      "hana12_atorie_no_koibitotachi_0.png",
+      "hana12_atorie_no_koibitotachi_1.png"
+    ],
+    "title": "花吻在上12 画室里的恋人们",
+    "unzip_pass": "pymo"
   }
 ]
