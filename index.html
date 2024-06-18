@@ -32,7 +32,7 @@
     </div>
 
     <div id="games" align="center" hidden="true">
-        <a href="./index.html">返回索引列表</a>
+        <a href="./index.html">返回源列表</a>
         <br />
         <br />
         <br />
@@ -45,13 +45,72 @@
                 <tr>
                     <th>游戏名称</th>
                     <th>游戏ID</th>
-                    <th>包含NSFW内容</th>
+                    <th>包含成人内容</th>
                     <th>移植者</th>
                     <th>发布时间</th>
             </thead>
             <tbody id="games-list">
             </tbody>
         </table>
+    </div>
+
+    <div id="game-details" align="center" hidden="true">
+        <a href="./index.html">返回源列表</a>&nbsp; <a id="game-details-return-game-list">返回游戏列表</a>
+        <br />
+        <br />
+        <br />
+        <h2 id="game-details-title"></h2>
+        <table border="1" cellspacing="0">
+            <tr>
+                <td>源</td>
+                <td id="game-details-source-name"></td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td id="game-details-id"></td>
+            </tr>
+            <tr>
+                <td>移植者</td>
+                <td id="game-details-author"></td>
+            </tr>
+            <tr>
+                <td>包含成人内容</td>
+                <td id="game-details-contains-h"></td>
+            </tr>
+            <tr>
+                <td>下载链接</td>
+                <td><a id="game-details-download-link">点击下载</a></td>
+            </tr>
+            <tr>
+                <td>提取码</td>
+                <td id="game-details-download-pass"></td>
+            </tr>
+            <tr>
+                <td>解压密码</td>
+                <td id="game-details-unzip-pass"></td>
+            </tr>
+            <tr>
+                <td>发布地址</td>
+                <td><a id="game-details-publish-site">点击进入</a></td>
+            </tr>
+            <tr>
+                <td>发布日期</td>
+                <td id="game-details-publish-date"></td>
+            </tr>
+            <tr>
+                <td>支持平台</td>
+                <td id="game-details-platforms"></td>
+            </tr>
+        </table>
+
+        <div id="game-details-screenshots"></div>
+
+        <div align="center">
+            <p align="left" id="game-details-desc"></p>
+        </div>
+
+        <br />
+
     </div>
 
     <script type="text/javascript">
@@ -75,17 +134,17 @@
             var vars = query.split("&");
             for (var i = 0; i < vars.length; i++) {
                 var pair = vars[i].split("=");
-                if (pair[0] == variable) {return pair[1];}
+                if (pair[0] == variable) {return decodeURI(pair[1]);}
             }
             return false;
         }
 
-        function showGameList(source) {
+        function showGameList(source, gameList) {
             document.getElementById("games").hidden = false;
             document.getElementById("games-source-name").innerHTML = source.name;
             document.getElementById("games-source-desc").innerHTML = source.desc;
 
-            let gameList = document.getElementById("games-list");
+            let gameListHTML = document.getElementById("games-list");
 
             let addGameToList = function (game) {
                 var html = "";
@@ -98,26 +157,68 @@
                 html += "<td>" + game.publish_date + "</td>";
 
                 html += "</tr>";
-                gameList.innerHTML += html;
+                gameListHTML.innerHTML += html;
             }
 
-            fetch(source.url)
-                .then((x) => x.json())
-                .then((json) => json.forEach(addGameToList));
+            gameList.forEach(addGameToList);
+        }
+
+        function showGameDetails(source, game) {
+            document.getElementById("game-details").hidden = false;
+            document.getElementById("game-details-return-game-list").href = "./index.html?source=" + source.id;
+            document.getElementById("game-details-source-name").innerHTML += source.name;
+            document.getElementById("game-details-author").innerHTML += game.author;
+            document.getElementById("game-details-id").innerHTML += game.baidu_folder;
+            document.getElementById("game-details-contains-h").innerHTML += game.contains_h ? "包含" : "不包含";
+            document.getElementById("game-details-title").innerHTML = game.title;
+            document.getElementById("game-details-desc").innerHTML = game.introduction;
+            document.getElementById("game-details-download-link").href = game.download_link;
+            document.getElementById("game-details-download-pass").innerHTML = game.download_pass;
+            document.getElementById("game-details-unzip-pass").innerHTML = game.unzip_pass;
+            document.getElementById("game-details-publish-site").href = game.publish_site;
+            document.getElementById("game-details-publish-date").innerHTML = game.publish_date;
+
+            var platforms = "";
+            game.platforms.forEach((p) => platforms += (p + ' '));
+
+            document.getElementById("game-details-platforms").innerHTML = platforms;
+
+            let screenshotsDiv = document.getElementById("game-details-screenshots");
+            game.screenshots.forEach((s) => {
+                var url = s;
+                if (!url.startsWith("http://") && !url.startsWith("https://")) {
+                    url = source.screenshot_baseurl + "/" + url;
+                }
+
+                screenshotsDiv.innerHTML += "<img src='" + url + "'>";
+            });
         }
 
         function main(sources) {
             let sourceId = getQueryVariable("source");
-            let gameName = getQueryVariable("game");
+            let gameId = getQueryVariable("game");
 
-            if (sourceId == false && gameName == false) {
+            if (sourceId == false && gameId == false) {
                 showSourcesList(sources);
                 return;
             }
 
             let source = sources.find((s) => s.id == sourceId);
-            if (sourceId != false)
-                showGameList(source);
+            fetch(source.url)
+                .then((x) => x.json())
+                .then((gameList) => {
+                    if (sourceId != false && gameId == false) {
+                        showGameList(source, gameList)
+                        return;
+                    }
+
+                    if (sourceId != false && gameId != false) {
+                        let gameObj = gameList.find((g) => g.baidu_folder == gameId);
+                        showGameDetails(source, gameObj);
+                        return;
+                    }
+                });
+
         }
 
         fetch("./sources.json")

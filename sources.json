@@ -3,7 +3,7 @@
         "name": "PyMO官方游戏索引",
         "id": "pymogames-official",
         "url": "https://raw.githubusercontent.com/pymo/pymo.github.io/master/src/gamedb.json",
-        "screenshot_baseurl": "https://pymogames.com/images/",
+        "screenshot_baseurl": "https://pymogames.com/",
         "local_path": null,
         "local_screenshot_path": null,
         "desc": "在<a href='https://www.pymogames.com' target='_blank'>pymogames.com</a>上所使用的索引，确保所有汉化的游戏都已经获得汉化组许可。<br />可能需要梯子才能打开。"
@@ -21,7 +21,7 @@
         "name": "PyMO官方游戏索引（镜像）",
         "id": "pymogames-mirror",
         "url": "./pymogames-mirror-gamedb.json",
-        "screenshot_baseurl": "https://pymogames.com/images/",
+        "screenshot_baseurl": "https://pymogames.com/",
         "local_path": "./pymogames-mirror-gamedb.json",
         "desc": "<a href='https://www.pymogames.com' target='_blank'>pymogames.com</a>索引的本地镜像，在官方索引打不开的时候使用。<br />更新可能不及时。"
     }
