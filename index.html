@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>PyMO 游戏索引</title>
 
+    <script src="https://cdn.staticfile.net/jquery/1.10.2/jquery.min.js"></script>
+
     <!-- Icons -->
     <link rel="icon" href="https://raw.githubusercontent.com/pymo/pymo.github.io/master/images/pymo.ico"
         type="image/x-icon" />
@@ -86,11 +88,21 @@
             let gameList = document.getElementById("games-list");
 
             let addGameToList = function (game) {
-                gameList.innerHTML += game.title;
+                var html = "";
+                html += "<tr>";
+
+                html += "<td><a href='./index.html?source=" + source.id + "&game=" + game.baidu_folder + "'>" + game.title + "</a></td>";
+                html += "<td>" + game.baidu_folder + "</td>";
+                html += "<td>" + (game.contains_h ? "√" : "") + "</td>";
+                html += "<td>" + game.author + "</td>";
+                html += "<td>" + game.publish_date + "</td>";
+
+                html += "</tr>";
+                gameList.innerHTML += html;
             }
 
             fetch(source.url)
-                .then((response) => response.json())
+                .then((x) => x.json())
                 .then((json) => json.forEach(addGameToList));
         }
 
