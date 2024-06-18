@@ -62,19 +62,27 @@
             return false;
         }
 
-        function showGameList(sources, sourceName) {
-            document.getElementById("game-list").hidden = false;
+        function showGameList(source) {
+            let g = document.getElementById("game-list");
+            g.hidden = false;
+
+            fetch(source.url)
+                .then((response) => response.text())
+                .then((json) => g.innerText = json);
         }
 
         function main(sources) {
-            let sourceName = getQueryVariable("source");
+            let sourceId = getQueryVariable("source");
             let gameName = getQueryVariable("game");
 
-            if (sourceName == false && gameName == false)
+            if (sourceId == false && gameName == false) {
                 showSourcesList(sources);
+                return;
+            }
 
-            if (sourceName != false)
-                showGameList(sources, sourceName);
+            let source = sources.find((s) => s.id == sourceId);
+            if (sourceId != false)
+                showGameList(source);
         }
 
         fetch("./sources.json")
