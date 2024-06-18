@@ -54,3 +54,7 @@ unzip_pass    | string       | 是   | 解压密码
 ### `verify.fsx`
 
 该工具用于对索引的正确性进行验证。
+
+### `update-pymogames-mirror.fsx`
+
+该工具用于更新pymogames源的本地镜像。
