@@ -31,7 +31,7 @@
         <br />
     </div>
 
-    <div id="pass" align="center">
+    <div id="pass" align="center" hidden="true">
         <h2>请输入密码</h2>
         <input id="pass-password-input" type="password"></input>
         <input type="button" value="确定" onclick="checkPass()"></input>
@@ -215,6 +215,7 @@
             let pass = getQueryVariable("pass");
 
             if (pass != "1") {
+                document.getElementById("pass").hidden = false;
                 return;
             }
 
