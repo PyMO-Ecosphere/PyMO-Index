@@ -217,5 +217,33 @@
     ],
     "title": "花吻在上15 白雪骑士",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "hana16_tenshitachi_no_yakusoku",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Hana-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "花吻16，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-18",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Hana-PyMO",
+    "screenshots": [
+      "hana16_tenshitachi_no_yakusoku_0.png",
+      "hana16_tenshitachi_no_yakusoku_1.png",
+      "hana16_tenshitachi_no_yakusoku_2.png",
+      "hana16_tenshitachi_no_yakusoku_3.png",
+      "hana16_tenshitachi_no_yakusoku_4.png"
+    ],
+    "title": "花吻在上16 天使们的约定",
+    "unzip_pass": "pymo"
   }
 ]
