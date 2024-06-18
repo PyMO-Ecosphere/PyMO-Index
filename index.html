@@ -1,25 +1,58 @@
 <html>
 
-<script type="text/javascript">
-    fetch("./sources.json")
-        .then((response) => response.text())
-        .then((json) =>
-            document
-                .getElementById("test")
-                .innerText = json);
-</script>
-
 <head>
     <meta charset="utf-8">
-    <title>PyMO Index!</title>
+    <title>PyMO 游戏索引</title>
+
+    <!-- Icons -->
+    <link rel="icon" href="https://raw.githubusercontent.com/pymo/pymo.github.io/master/images/pymo.ico"
+        type="image/x-icon" />
+    <link rel="Shortcut Icon" href="https://raw.githubusercontent.com/pymo/pymo.github.io/master/images/pymo.ico"
+        type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="https://raw.githubusercontent.com/pymo/pymo.github.io/master/images/pymo-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="https://raw.githubusercontent.com/pymo/pymo.github.io/master/images/pymo-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="https://raw.githubusercontent.com/pymo/pymo.github.io/master/images/pymo-icon-72.png" />
+    <link rel="apple-touch-icon"
+        href="https://raw.githubusercontent.com/pymo/pymo.github.io/master/images/pymo-icon-57.png" />
 </head>
 
 <body>
-    <h1>网站建设中</h1>
+    <h1 align="center">PyMO游戏索引</h1>
 
-    <div id="test">
-        jsonHere
+    <div id="sources" align="center" hidden="true">
+        <h2>选择一个源</h2>
+        <br />
+        <br />
+        <br />
     </div>
+
+    <script type="text/javascript">
+
+        function showSourcesList(sources) {
+            let div = document.getElementById("sources");
+            div.hidden = false;
+
+            sources.forEach(src => {
+                var html = "";
+                html += "<a target='_blank' href='./index.html?source=" + src.id + "'><h3>" + src.name + "</h3></a>";
+                html += "<p>" + src.desc + "</p>";
+                html += "<br />"
+
+                div.innerHTML += html;
+            });
+        }
+
+        function main(sources) {
+            showSourcesList(sources);
+        }
+
+        fetch("./sources.json")
+            .then((response) => response.json())
+            .then(main);
+    </script>
 </body>
 
 </html>
