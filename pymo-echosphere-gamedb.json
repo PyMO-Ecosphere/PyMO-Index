@@ -639,5 +639,58 @@
     ],
     "title": "同居恋人洛丽塔",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "mainichi_kiss_lolita",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "每日亲吻洛丽塔，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-19",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO",
+    "screenshots": [
+      "mainichi_kiss_lolita_0.png",
+      "mainichi_kiss_lolita_1.png",
+      "mainichi_kiss_lolita_2.png"
+    ],
+    "title": "每日亲吻洛丽塔",
+    "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "osana_10years",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "幼馴染と十年、夏，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-20",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO",
+    "screenshots": [
+      "osana_10years_0.png",
+      "osana_10years_1.png",
+      "osana_10years_2.png",
+      "osana_10years_3.png"
+    ],
+    "title": "幼馴染と十年、夏",
+    "unzip_pass": "pymo"
   }
 ]
