@@ -617,7 +617,7 @@
   {
     "author": "gem617",
     "baidu_folder": "koibito_lolita",
-    "contains_h": false,
+    "contains_h": true,
     "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
     "download_pass": null,
     "folder": null,
