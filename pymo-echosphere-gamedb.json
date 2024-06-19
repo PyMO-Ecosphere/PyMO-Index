@@ -532,5 +532,112 @@
     ],
     "title": "愛欲姉妹ロリータ",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "danseiiyashi",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "愈疗男性的机器，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-19",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO",
+    "screenshots": [
+      "danseiiyashi_0.png",
+      "danseiiyashi_1.png",
+      "danseiiyashi_2.png"
+    ],
+    "title": "愈疗男性的机器",
+    "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "haremu_fukako_lolita",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "后宫双子洛丽塔，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-19",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO",
+    "screenshots": [
+      "haremu_fukako_lolita_0.png",
+      "haremu_fukako_lolita_1.png",
+      "haremu_fukako_lolita_2.png"
+    ],
+    "title": "后宫双子洛丽塔",
+    "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "kodoku_yuri",
+    "contains_h": false,
+    "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "孤独少女的百合物语，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-19",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO",
+    "screenshots": [
+      "kodoku_yuri_0.png",
+      "kodoku_yuri_1.png",
+      "kodoku_yuri_2.png",
+      "kodoku_yuri_3.png",
+      "kodoku_yuri_4.png",
+      "kodoku_yuri_5.png"
+    ],
+    "title": "孤独少女的百合物语",
+    "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "koibito_lolita",
+    "contains_h": false,
+    "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "同居恋人洛丽塔，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-19",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO",
+    "screenshots": [
+      "koibito_lolita_0.png",
+      "koibito_lolita_1.png",
+      "koibito_lolita_2.png"
+    ],
+    "title": "同居恋人洛丽塔",
+    "unzip_pass": "pymo"
   }
 ]
