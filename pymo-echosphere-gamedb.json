@@ -718,5 +718,61 @@
     ],
     "title": "相思相愛洛丽塔",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "souai_lolita_no_seikatsu",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "相思相愛洛丽塔的生活，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-20",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO",
+    "screenshots": [
+      "souai_lolita_no_seikatsu_0.png",
+      "souai_lolita_no_seikatsu_1.png",
+      "souai_lolita_no_seikatsu_2.png",
+      "souai_lolita_no_seikatsu_3.png",
+      "souai_lolita_no_seikatsu_4.png"
+    ],
+    "title": "相思相愛洛丽塔的生活",
+    "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "yubikirikunyaku_lolita",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "拉钩起誓婚约洛丽塔，拔作，暂未获取汉化脚本的授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-20",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Night-Sheep-Collection-PyMO",
+    "screenshots": [
+      "yubikirikunyaku_lolita_0.png",
+      "yubikirikunyaku_lolita_1.png",
+      "yubikirikunyaku_lolita_2.png",
+      "yubikirikunyaku_lolita_3.png",
+      "yubikirikunyaku_lolita_4.png"
+    ],
+    "title": "拉钩起誓婚约洛丽塔",
+    "unzip_pass": "pymo"
   }
 ]
