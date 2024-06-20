@@ -972,5 +972,30 @@
     ],
     "title": "田舎でかてきよ",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "koneko",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Babel-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "与小奶猫创造家族，拔作，守夜人汉化组。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-21",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Babel-PyMO",
+    "screenshots": [
+      "koneko_0.png",
+      "koneko_1.png"
+    ],
+    "title": "与小奶猫创造家族",
+    "unzip_pass": "pymo"
   }
 ]
