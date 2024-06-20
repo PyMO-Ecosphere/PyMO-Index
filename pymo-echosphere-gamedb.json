@@ -824,5 +824,30 @@
     ],
     "title": "ぶらこん",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "himitsu",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Babel-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "秘密基地的羞羞事，拔作，尚未获取汉化组授权。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-20",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Babel-PyMO",
+    "screenshots": [
+      "himitsu_0.png",
+      "himitsu_1.png"
+    ],
+    "title": "秘密基地的羞羞事",
+    "unzip_pass": "pymo"
   }
 ]
