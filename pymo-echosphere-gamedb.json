@@ -799,5 +799,30 @@
     ],
     "title": "诱惑自大洛丽塔",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "burakon",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Babel-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "ぶらこん，拔作，日文原版。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-20",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Babel-PyMO",
+    "screenshots": [
+      "burakon_0.png",
+      "burakon_1.png"
+    ],
+    "title": "ぶらこん",
+    "unzip_pass": "pymo"
   }
 ]
