@@ -1022,5 +1022,80 @@
     ],
     "title": "最喜欢哥哥了",
     "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "oniichan_mou_iichattano",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Babel-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "お兄ちゃんもういっちゃったの?，拔作，日文原版。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-21",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Babel-PyMO",
+    "screenshots": [
+      "oniichan_mou_iichattano_0.png",
+      "oniichan_mou_iichattano_1.png"
+    ],
+    "title": "お兄ちゃんもういっちゃったの?",
+    "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "saimin",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Babel-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "对盛气凌人的妹妹实行催眠术，拔作，机器翻译。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-21",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Babel-PyMO",
+    "screenshots": [
+      "saimin_0.png",
+      "saimin_1.png"
+    ],
+    "title": "对盛气凌人的妹妹实行催眠术",
+    "unzip_pass": "pymo"
+  },
+  {
+    "author": "gem617",
+    "baidu_folder": "toilet_saimin_itazura",
+    "contains_h": true,
+    "download_link": "https://github.com/PyMO-Ecosphere/Babel-PyMO/releases",
+    "download_pass": null,
+    "folder": null,
+    "game_id": null,
+    "introduction": "催眠術使ってトイレでいたずら，拔作，日文原版。",
+    "platforms": [
+      "3ds",
+      "android",
+      "psp",
+      "symbian",
+      "wii"
+    ],
+    "publish_date": "2024-06-21",
+    "publish_site": "https://github.com/PyMO-Ecosphere/Babel-PyMO",
+    "screenshots": [
+      "toilet_saimin_itazura_0.png",
+      "toilet_saimin_itazura_1.png"
+    ],
+    "title": "催眠術使ってトイレでいたずら",
+    "unzip_pass": "pymo"
   }
 ]
